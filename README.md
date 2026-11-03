@@ -146,8 +146,8 @@ qa_chain = RetrievalQA.from_chain_type(
     retriever=vectordb.as_retriever(search_kwargs={"k": 3}),
     return_source_documents=True
 )
-#### question 1:
-question = "What is Generative AI?"
+
+1.question = "What is Generative AI?"
 
 result = qa_chain.invoke({"query": question})
 
@@ -162,8 +162,8 @@ else:
     print("No source documents retrieved.")
 
 print("Total chunks:", vectordb._collection.count())
-#### question 2:
-question = "What are the main applications of Generative AI?"
+
+2.question = "What are the main applications of Generative AI?"
 
 result = qa_chain.invoke({"query": question})
 
